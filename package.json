@@ -1,17 +1,20 @@
 {
-  "name": "rabbit-pubsub",
-  "version": "0.0.1",
-  "description": "Publish/Subscribe wrapper for Rabbit.JS",
-  "main": "index.js",
-  "keywords": [
-    "amqp",
-    "rabbitmq",
-    "pubsub"
-  ],
-  "author": "Jesse Dailey <jesse.dailey@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "bling":     "latest",
-    "rabbit.js": "latest"
-  }
+	"name": "rabbit-pubsub",
+	"version": "0.0.1",
+	"description": "Publish/Subscribe wrapper for Rabbit.JS",
+	"main": "index.js",
+	"scripts": {
+		"prepublish": "coffee -c index.coffee"
+	},
+	"keywords": [
+		"amqp",
+		"rabbitmq",
+		"pubsub"
+	],
+	"author": "Jesse Dailey <jesse.dailey@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"bling":		 "latest",
+		"rabbit.js": "latest"
+	}
 }
