@@ -14,7 +14,7 @@
 	"author": "Jesse Dailey <jesse.dailey@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"bling":		 "latest",
+		"bling":     "latest",
 		"rabbit.js": "latest"
 	}
 }
