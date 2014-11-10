@@ -45,9 +45,7 @@ class Rabbit extends $.Promise
 				p.resolve()
 
 	subscribe: (c, p, h) -> # (channel, pattern, func)
-		if $.is 'function', c      # calling as subcribe(func) is same as (default, null, func)
-			[h, p, c] = [c, null, rabbitChannel()]
-		else if $.is 'function', p # calling as subscribe(chan, func) is as (chan, null, func)
+		if $.is 'function', p # calling as subscribe(chan, func) is as (chan, null, func)
 			[h, p] = [p, null]
 		# a null pattern matches Anything
 		p ?= $.matches.Any
