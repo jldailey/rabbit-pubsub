@@ -71,7 +71,7 @@ class Rabbit extends $.Promise
 					if @verbose then log "subscribed to channel", c, p
 
 	unsubscribe: (c, p, h) ->
-		@then (context) ->
+		@then (context) =>
 			if c? and (not p?) and (not h?)
 				context._sockets[c]?.close()
 				delete context._sockets[c]
@@ -79,11 +79,11 @@ class Rabbit extends $.Promise
 			else if c? and p? and (not h?)
 				context._patterns[c] = patterns = $(context._patterns[c]).filter (item) ->
 					item.p is p
-				if patterns.length is 0 then @unsubscribe(c)
+				if patterns.length is 0 then @unsubscribe c
 			else if c? and p? and h?
 				context._patterns[c] = patterns = $(context._patterns[c]).filter (item) ->
 					item.p is p and item.h is h
-				if patterns.length is 0 then @unsubscribe(c)
+				if patterns.length is 0 then @unsubscribe c
 
 	once: (chan, pattern, handler) ->
 		f = =>
