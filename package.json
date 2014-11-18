@@ -11,6 +11,7 @@
 		"rabbitmq",
 		"pubsub"
 	],
+	"repository": "git@github.com:jldailey/rabbit-pubsub.git",
 	"author": "Jesse Dailey <jesse.dailey@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
