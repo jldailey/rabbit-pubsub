@@ -73,7 +73,6 @@ class Rabbit extends $.Promise
 	unsubscribe: (c, p, h) ->
 		@then (context) =>
 			if c? and (not p?) and (not h?)
-				context._sockets[c]?.close()
 				delete context._sockets[c]
 				delete context._patterns[c]
 			else if c? and p? and (not h?)
