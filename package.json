@@ -1,6 +1,6 @@
 {
 	"name": "rabbit-pubsub",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "Publish/Subscribe wrapper for Rabbit.JS",
 	"main": "index.js",
 	"scripts": {
