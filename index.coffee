@@ -4,7 +4,7 @@ RabbitJS = require 'rabbit.js'
 
 class Rabbit extends $.Promise
 	constructor: (@verbose = false) ->
-		super @
+		super()
 
 	connect: (url) ->
 		if @resolved or @rejected then @reconnect(url)
